@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 
 // API endpoints
-const API_ROOT = "http://localhost:3000/v1";
+const API_ROOT = "https://todayontap.herokuapp.com";
+const API_VERSION = "/v1";
 
-// const EVENTS_URL = API_ROOT + "events";
-const EVENTS_FEATURED_URL = API_ROOT + "/events/featured";
-const EVENTS_TODAY_URL = API_ROOT + "/events/today";
-const EVENTS_UPCOMING_URL = API_ROOT + "/events/upcoming";
+// const EVENTS_URL = API_ROOT + API_VERSION + "events";
+const EVENTS_FEATURED_URL = API_ROOT + API_VERSION + "/events/featured";
+const EVENTS_TODAY_URL = API_ROOT + API_VERSION + "/events/today";
+const EVENTS_UPCOMING_URL = API_ROOT + API_VERSION + "/events/upcoming";
 
-const VENUES_URL = API_ROOT + "/venues";
-const VENUES_BREWERIES_URL = API_ROOT + "/venues/breweries";
+const VENUES_URL = API_ROOT + API_VERSION + "/venues";
+const VENUES_BREWERIES_URL = API_ROOT + API_VERSION + "/venues/breweries";
 
 export function getUrlForEndpoint(endpoint) {
   let url;
