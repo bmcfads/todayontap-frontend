@@ -9,6 +9,9 @@ export default function Events({ endpoint }) {
 
   return (
     <div className="m-4">
+      <h1 className="mb-4 font-extrabold text-3xl text-slate-800">
+        {endpoint.charAt(0).toUpperCase() + endpoint.slice(1)}
+      </h1>
       <Fetching loading={le} error={ee} />
       {events !== null && !events.length && <Message variant="no-events" />}
       {events !== null && !!events.length && (

@@ -9,6 +9,9 @@ export default function Venues({ endpoint }) {
 
   return (
     <div className="m-4">
+      <h1 className="mb-4 font-extrabold text-3xl text-slate-800">
+        {endpoint.charAt(0).toUpperCase() + endpoint.slice(1)}
+      </h1>
       <Fetching loading={lv} error={ev} />
       {venues !== null && !venues.length && <Message variant="no-venues" />}
       {venues !== null && !!venues.length && (
