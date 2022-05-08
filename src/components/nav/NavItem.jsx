@@ -6,7 +6,7 @@ export default function NavItem({ href, children }) {
       <NavLink
         to={href}
         className={({ isActive }) =>
-          "p-2 rounded-full font-extrabold " +
+          "px-3 py-2 rounded-full font-extrabold " +
           (isActive
             ? "bg-slate-800 text-white "
             : "text-slate-800 hover:bg-slate-800 hover:text-white")
