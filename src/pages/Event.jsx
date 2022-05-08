@@ -19,6 +19,9 @@ export default function Event() {
 
   return (
     <div className="m-4">
+      <h1 className="font-extrabold text-3xl text-center text-slate-800">
+        Event
+      </h1>
       <div className="grid grid-cols-1">
         <div className="justify-self-center m-4">
           <Fetching loading={le} error={ee} />

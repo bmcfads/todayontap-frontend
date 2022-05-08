@@ -18,6 +18,9 @@ export default function Venue() {
 
   return (
     <div className="m-4">
+      <h1 className="font-extrabold text-3xl text-center text-slate-800">
+        Venue
+      </h1>
       <div className="grid grid-cols-1 justify-center md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         <div className="justify-self-center m-4">
           <Fetching loading={lv} error={ev} />
