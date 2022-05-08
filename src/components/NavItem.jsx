@@ -6,10 +6,10 @@ export default function NavItem({ href, children }) {
       <NavLink
         to={href}
         className={({ isActive }) =>
-          "block p-3 rounded-full font-extrabold " +
+          "p-2 rounded-full font-extrabold " +
           (isActive
-            ? "rounded-full bg-slate-800 text-white "
-            : "text-slate-800 hover:rounded-full hover:bg-slate-800 hover:text-white")
+            ? "bg-slate-800 text-white "
+            : "text-slate-800 hover:bg-slate-800 hover:text-white")
         }
       >
         {children}
