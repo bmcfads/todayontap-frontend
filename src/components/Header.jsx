@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import Nav from "./nav/Nav";
-import NavMobile from "./nav/NavMobile";
+import Nav from "./navs/Nav";
+import NavMobile from "./navs/NavMobile";
 
 export default function Header() {
   return (
