@@ -15,15 +15,18 @@ const VENUES_BREWERIES_URL = API_ROOT + API_VERSION + "/venues/breweries";
 export function getUrlForEndpoint(endpoint) {
   let url;
 
+  const offset = new Date().getTimezoneOffset() * 60;
+  const eventQueryParams = "?utc_offset=" + offset;
+
   switch (endpoint) {
     case "featured":
-      url = EVENTS_FEATURED_URL;
+      url = EVENTS_FEATURED_URL + eventQueryParams;
       break;
     case "today":
-      url = EVENTS_TODAY_URL;
+      url = EVENTS_TODAY_URL + eventQueryParams;
       break;
     case "upcoming":
-      url = EVENTS_UPCOMING_URL;
+      url = EVENTS_UPCOMING_URL + eventQueryParams;
       break;
     case "breweries":
       url = VENUES_BREWERIES_URL;
