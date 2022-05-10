@@ -18,8 +18,8 @@ export default function Venues({ endpoint }) {
         {endpoint.charAt(0).toUpperCase() + endpoint.slice(1)}
       </h1>
       <Fetching loading={lv} error={ev} />
-      {venues !== null && !venues.length && <Message variant="no-venues" />}
-      {venues !== null && !!venues.length && (
+      {venues != null && !venues.length && <Message variant="no-venues" />}
+      {venues != null && !!venues.length && (
         <CardGrid items={venues} cardVariant="large" />
       )}
     </div>

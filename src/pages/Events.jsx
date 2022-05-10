@@ -18,8 +18,8 @@ export default function Events({ endpoint }) {
         {endpoint.charAt(0).toUpperCase() + endpoint.slice(1)}
       </h1>
       <Fetching loading={le} error={ee} />
-      {events !== null && !events.length && <Message variant="no-events" />}
-      {events !== null && !!events.length && (
+      {events != null && !events.length && <Message variant="no-events" />}
+      {events != null && !!events.length && (
         <CardGrid items={events} cardVariant="large" />
       )}
     </div>
