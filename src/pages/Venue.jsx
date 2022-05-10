@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Fetching from "../components/Fetching";
 import Map from "../components/Map";
@@ -8,6 +9,10 @@ import { getUrlsForSlug, useFetch } from "../helpers/ApiUtils";
 import { filterEventsByCurrent } from "../helpers/FilterUtils";
 
 export default function Venue() {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   const { venueSlug } = useParams();
 
   const [venueUrl, eventsUrl] = getUrlsForSlug(venueSlug);

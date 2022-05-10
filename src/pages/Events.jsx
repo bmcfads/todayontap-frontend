@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import Fetching from "../components/Fetching";
 import CardGrid from "../components/cards/CardGrid";
 import Message from "../components/messages/Message";
 import { getUrlForEndpoint, useFetch } from "../helpers/ApiUtils";
 
 export default function Events({ endpoint }) {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   const url = getUrlForEndpoint(endpoint);
   const { loading: le, error: ee, data: events } = useFetch(url);
 

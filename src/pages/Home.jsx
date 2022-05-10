@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Fetching from "../components/Fetching";
 import CardSlider from "../components/cards/CardSlider";
@@ -5,6 +6,10 @@ import Message from "../components/messages/Message";
 import { getUrlForEndpoint, useFetch } from "../helpers/ApiUtils";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   const featuredUrl = getUrlForEndpoint("featured");
   const todayUrl = getUrlForEndpoint("today");
   const upcomingUrl = getUrlForEndpoint("upcoming");

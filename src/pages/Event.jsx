@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import EventOverview from "../components/EventOverview";
 import Fetching from "../components/Fetching";
@@ -10,6 +11,10 @@ import {
 } from "../helpers/ApiUtils";
 
 export default function Event() {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   const { venueSlug, id } = useParams();
 
   const eventUrl = getUrlForSlugAndID(venueSlug, id);
