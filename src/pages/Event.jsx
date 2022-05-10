@@ -37,11 +37,8 @@ export default function Event() {
             Venue
           </h2>
           <Fetching loading={lv} error={ev} />
-          {venue ? (
-            <Card item={venue} variant="large" />
-          ) : (
-            <Message variant="no-venues" />
-          )}
+          {venue != null && !venue && <Message variant="no-venues" />}
+          {venue != null && venue && <Card item={venue} variant="large" />}
         </div>
       </div>
     </div>
