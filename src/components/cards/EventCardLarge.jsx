@@ -9,7 +9,7 @@ export default function EventCardLarge({ event }) {
   const time = getTimeFromDatetime(event.datetime);
 
   return (
-    <article className="shrink-0 w-80 overflow-hidden rounded-lg shadow border border-slate-200 bg-white hover:shadow-md hover:scale-105">
+    <article className="relative shrink-0 w-80 overflow-hidden rounded-lg shadow border border-slate-200 bg-white hover:shadow-md hover:scale-105">
       <Link to={"/venues/" + event.venue.slug + "/events/" + event.id}>
         <img
           className="w-full h-44 rounded-t-lg object-cover"
