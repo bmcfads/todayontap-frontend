@@ -1,0 +1,15 @@
+{
+  "short_name": "todayontap",
+  "name": "todayontap",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1d2433",
+  "background_color": "#ffffff"
+}
